@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박예은 과제</title>
+
+    <link rel="shortcut icon" href="./images/fv.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .allall{
+            width: 100vw;
+            height: 100vh;
+            
+            overflow-x: hidden;
+            background-color: #112967;
+        }
+        .all {
+
+            position: relative;
+            background-color: #C6F1FF;
+            width: 100%;
+            aspect-ratio: 2.2 / 1; 
+            overflow: hidden;
+
+        }
+
+
+        svg.topWaves {
+            position: absolute;
+            bottom: -68%;
+            filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+            left: 55%;
+            transform: translate(-50%, -50%);
+            width: 130%;
+            height: 80%;
+            z-index: 2;
+            animation: topWaves 5s ease 0s infinite;
+        }
+        @keyframes topWaves {
+            25%,75%  {transform: translateY(-53%)translate(-52%);}
+            50% {transform: translateY(-50%) translate(-53%);}
+        }
+
+        svg.botWaves {
+            position: absolute;
+            bottom: -75%;
+            width: 130%;
+            height: 80%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+            filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+            z-index: 11;
+            animation: botWaves 6s ease 0s infinite;
+        }
+        @keyframes botWaves {
+            25%,75% {transform: translateY(-55%) translate(-55%);}
+            50% {transform: translateY(-50%) translate(-60%);}
+        } 
+
+        svg.cloud {
+            
+            fill: #FFF;
+            filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.3));
+            
+            transform: translate(-50%, -50%);
+
+
+        }
+
+        svg.cloud1 {
+            position: absolute;
+            top: 30%;
+            left: 25%;
+            width: 25%;
+            z-index: 5;
+        }
+
+        svg.cloud2 {
+            position: absolute;
+            top: 55%;
+            right: -20%;
+            width: 40%;
+            z-index: 1;
+        }
+
+        svg.sun {
+            position: absolute;
+            top: 8%;
+            left: 10%;
+            width: 10vw;
+
+            z-index: 2;
+            filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+
+        }
+        
+
+        svg.sun:hover,
+        svg.sun:focus {
+            animation: sun 1s ease 0s 1; 
+        }        
+        @keyframes sun {
+            20% {width: 12vw;}
+            40% {width: 8vw;}
+            60% {width: 11vw;}
+            80% {width: 10vw;}
+
+        } 
+
+        svg.boat {
+
+            fill: #010024;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+            /* x,y */
+            width: 25%;
+            z-index: 5;
+            filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+
+            animation: boat 6s ease 0s infinite;
+
+        }
+
+        @keyframes boat {
+            25%,75% {transform: translateY(-55%) translate(-55%);}
+            50% {transform: translateY(-50%) translate(-60%);}
+        }
+
+
+        svg.swing:hover,
+        svg.swing:focus {
+            animation: swing 0.6s ease 0s 1;
+        }
+
+        @keyframes swing {
+            20% {transform: rotate(15deg)translate(-50%, -50%);}
+            40% {transform: rotate(-10deg)translate(-50%, -50%);}
+            60% {transform: rotate(5deg)translate(-50%, -50%);}
+            80% {transform: rotate(-5deg)translate(-50%, -50%);}
+            100% {transform: rotate(0deg)translate(-50%, -50%);}
+        }
+        p.textBox{
+            padding: 0 50px 50px 50px;
+            color: #C6F1FF;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="allall">
+    <div class="all">
+        
+        <svg class="topWaves" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 2000 329"
+            fill="none">
+            <g filter="url(#filter0_d_7_54)" >
+                <path
+                    d="M-234.084 1.21464C-281.032 39.3888 -340.914 62.2705 -406.14 62.2705C-472.055 62.2705 -532.512 38.903 -579.679 0V396H2530.68V1.21464C2483.73 39.3889 2423.85 62.2705 2358.62 62.2705C2292.71 62.2705 2232.25 38.903 2185.08 0V1.21464C2138.14 39.3889 2078.25 62.2705 2013.03 62.2705C1947.11 62.2705 1886.66 38.903 1839.49 0V1.21464C1792.54 39.3889 1732.66 62.2705 1667.43 62.2705C1601.52 62.2705 1541.06 38.903 1493.89 0V1.21464C1446.94 39.3889 1387.06 62.2705 1321.84 62.2705C1255.92 62.2705 1195.46 38.903 1148.3 0V1.21464C1101.35 39.3889 1041.47 62.2705 976.242 62.2705C910.327 62.2705 849.869 38.903 802.702 0V1.21464C755.754 39.3889 695.872 62.2705 630.646 62.2705C564.731 62.2705 504.274 38.903 457.107 0V1.21464C410.159 39.3889 350.277 62.2705 285.051 62.2705C219.136 62.2705 158.679 38.903 111.512 0V1.21464C64.5633 39.3889 4.68153 62.2705 -60.5445 62.2705C-126.46 62.2705 -186.917 38.903 -234.084 0V1.21464Z"
+                    fill="#537FA7" />
+            </g>
+            <defs>
+                <filter id="filter0_d_7_54" x="-585.612" y="0" 
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                    <feOffset dy="5.93297" />
+                    <feGaussianBlur stdDeviation="2.96648" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_7_54" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_7_54" result="shape" />
+                </filter>
+            </defs>
+        </svg>
+        <svg class="botWaves" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 2000 329"
+            fill="none">
+            <g filter="url(#filter0_d_7_54)">
+                <path
+                    d="M-234.084 1.21464C-281.032 39.3888 -340.914 62.2705 -406.14 62.2705C-472.055 62.2705 -532.512 38.903 -579.679 0V396H2530.68V1.21464C2483.73 39.3889 2423.85 62.2705 2358.62 62.2705C2292.71 62.2705 2232.25 38.903 2185.08 0V1.21464C2138.14 39.3889 2078.25 62.2705 2013.03 62.2705C1947.11 62.2705 1886.66 38.903 1839.49 0V1.21464C1792.54 39.3889 1732.66 62.2705 1667.43 62.2705C1601.52 62.2705 1541.06 38.903 1493.89 0V1.21464C1446.94 39.3889 1387.06 62.2705 1321.84 62.2705C1255.92 62.2705 1195.46 38.903 1148.3 0V1.21464C1101.35 39.3889 1041.47 62.2705 976.242 62.2705C910.327 62.2705 849.869 38.903 802.702 0V1.21464C755.754 39.3889 695.872 62.2705 630.646 62.2705C564.731 62.2705 504.274 38.903 457.107 0V1.21464C410.159 39.3889 350.277 62.2705 285.051 62.2705C219.136 62.2705 158.679 38.903 111.512 0V1.21464C64.5633 39.3889 4.68153 62.2705 -60.5445 62.2705C-126.46 62.2705 -186.917 38.903 -234.084 0V1.21464Z"
+                    fill="#112967"  />
+            </g>
+            <defs>
+                <filter id="filter0_d_7_54" x="-585.612" y="0" 
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                    <feOffset dy="5.93297" />
+                    <feGaussianBlur stdDeviation="2.96648" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_7_54" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_7_54" result="shape" />
+                </filter>
+            </defs>
+        </svg>
+
+
+        <svg class="cloud cloud1 swing" xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 612 375" fill="none">
+            <g filter="url(#filter0_d_9_59)">
+                <path
+                    d="M458.486 157.739C452.534 77.914 385.928 15 304.639 15C242.87 15 189.58 51.3255 164.936 103.794C158.521 102.87 151.952 102.391 145.265 102.391C73.3215 102.391 15 157.82 15 226.196C15 294.34 72.9286 349.626 144.537 349.998V350H490.939C543.992 350 587 306.961 587 253.87C587 200.778 543.992 157.739 490.939 157.739H458.486Z"
+                    fill="white" />
+            </g>
+            <defs>
+                <filter id="filter0_d_9_59" x="0" y="0"  filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                    <feOffset dx="5" dy="5" />
+                    <feGaussianBlur stdDeviation="10" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_9_59" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_9_59" result="shape" />
+                </filter>
+            </defs>
+        </svg>
+
+        <svg class="cloud cloud2 swing" xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 612 375" fill="none">
+            <g filter="url(#filter0_d_9_59)">
+                <path
+                    d="M458.486 157.739C452.534 77.914 385.928 15 304.639 15C242.87 15 189.58 51.3255 164.936 103.794C158.521 102.87 151.952 102.391 145.265 102.391C73.3215 102.391 15 157.82 15 226.196C15 294.34 72.9286 349.626 144.537 349.998V350H490.939C543.992 350 587 306.961 587 253.87C587 200.778 543.992 157.739 490.939 157.739H458.486Z"
+                    fill="white" />
+            </g>
+            <defs>
+                <filter id="filter0_d_9_59" x="0" y="0"  filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                    <feOffset dx="5" dy="5" />
+                    <feGaussianBlur stdDeviation="10" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_9_59" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_9_59" result="shape" />
+                </filter>
+            </defs>
+        </svg>
+
+
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 217 217" fill="none">
+            <g filter="url(#filter0_d_9_61)">
+                <circle cx="108.5" cy="104.5" r="104.5" fill="#F8F1BB" />
+            </g>
+            <defs>
+                <filter id="filter0_d_9_61" x="0" y="0" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_9_61" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_9_61" result="shape" />
+                </filter>
+            </defs>
+        </svg>
+
+
+        <svg class="boat swing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+                d="M256 16c0-7 4.5-13.2 11.2-15.3s13.9 .4 17.9 6.1l224 320c3.4 4.9 3.8 11.3 1.1 16.6s-8.2 8.6-14.2 8.6H272c-8.8 0-16-7.2-16-16V16zM212.1 96.5c7 1.9 11.9 8.2 11.9 15.5V336c0 8.8-7.2 16-16 16H80c-5.7 0-11-3-13.8-8s-2.9-11-.1-16l128-224c3.6-6.3 11-9.4 18-7.5zM5.7 404.3C2.8 394.1 10.5 384 21.1 384H554.9c10.6 0 18.3 10.1 15.4 20.3l-4 14.3C550.7 473.9 500.4 512 443 512H133C75.6 512 25.3 473.9 9.7 418.7l-4-14.3z" />
+        </svg>
+
+    </div>
+
+    <p class="textBox">
+        
+    </p>
+</div>
+</body>
+
+</html>
+<!-- 
+ -->
